@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Bruno</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(176, 176, 176);
+        }
+        
+        h1 {
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        h3 {
+            color: green;
+            font-size: 40px;
+        }
+        
+        .nomeVisitante {
+            color: rgb(116, 95, 233);
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .botao {
+            height: 30px;
+            width: 200px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .botao:hover {
+            background-color: orange;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Bem vindo do meu Site</h1>
+    <h3>Esse site é sobre Futebol</h3>
+    <p>Bem vindo</p>
+    <p id="visitante" class="nomeVisitante">Aguardando...</p>
+
+    <a href="https://www.cbf.com.br/"><img src="futebol.jpg" alt=""></a>
+    <br>
+    <a href="https://www.cbf.com.br/">Clique no link</a>
+
+    <h3>Cadastro</h3>
+    <label>Nome</label>
+    <br>
+    <input type="text">
+    <br>
+    <label>Sobrenome</label>
+    <br>
+    <input type="text">
+    <br>
+    <br>
+    <button onclick="enviar()" class="botao">Enviar</button>
+
+    <script>
+        function enviar() {
+            alert("Cadastro feito com sucesso!")
+        }
+        
+        //Variável para pegar o nome do visitante
+        var usuario = prompt("Digite o seu nome")
+        
+        //Pegar o valor da variável e imprimir na tela
+        document.getElementById('visitante').innerHTML = usuario
+    </script>
+    </center>
+</body>
+</html>
